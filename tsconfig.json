@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES6",                                     /* Output modern JavaScript (ES6+) */
+    // "lib": [],                                        /* Optional: define lib features like "DOM", "ESNext" if needed */
+
+    /* Modules */
+    "module": "commonjs",                                /* CommonJS for Node.js */
+    "rootDir": "./src",                                  /* Where the TypeScript source code lives */
+    "outDir": "./dist",                                  /* Where compiled JS files go */
+    "moduleResolution": "node",                          /* Use Node-style resolution */
+    "resolveJsonModule": true,                           /* Allow importing .json files */
+
+    /* JavaScript Support */
+    // "allowJs": true,                                 /* Optional: include .js files in compilation */
+
+    /* Interop Constraints */
+    "esModuleInterop": true,                             /* Allow default imports from CommonJS */
+    "forceConsistentCasingInFileNames": true,            /* Enforce correct casing across imports */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options */
+
+    /* Emit */
+    "skipLibCheck": true,                                /* Skip type checks for type declarations (faster build) */
+
+    /* Custom Types */
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  }
+}
