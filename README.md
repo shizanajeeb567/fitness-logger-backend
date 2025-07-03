@@ -1,79 +1,73 @@
 Fitness Logger API
-A RESTful API built with Node.js, Express, TypeScript, and MongoDB that allows users to track workouts, manage weekly fitness plans, and view statistics like calories burned and most frequent workout type.
+A RESTful API built with TypeScript, Node.js, Express, and MongoDB that allows users to manage their workout logs and weekly fitness plans. Users can log workouts, view their plans, and see workout statistics.
 
 Features
-User registration and login with JWT authentication
+Create and view workout logs
 
-Log daily workouts with exercises and calories burned
+Create and view weekly workout plans
 
-Create and update weekly workout plans
+View workout statistics
 
-View monthly calorie stats and frequent workout types
+JWT-based user authentication
 
-Protected routes with middleware
-
-Organized using MVC + Service structure
+Secure password storage with bcrypt
 
 Folder Structure
 backend/
-├── config/         # MongoDB connection
-├── controllers/    # Request handlers
-├── middleware/     # Auth middleware
-├── models/         # Mongoose schemas
-├── routes/         # API endpoints
-├── services/       # Business logic
-├── .env            # Environment variables
-├── app.ts          # Express app
-├── server.ts       # Entry point
-├── tsconfig.json
-└── package.json
+├── config/ // MongoDB connection
+├── controllers/ // Handles requests
+├── middlewares/ // Auth middleware
+├── models/ // Mongoose schemas
+├── routes/ // API endpoints
+├── services/ // Business logic
+├── node_modules/
+├── types/ // TypeScript types
+.env // Environment variables
+app.ts // Express app setup
+server.ts // Server entry point
+tsconfig.json
+package.json
 
 Setup Instructions
-Clone the repository
-Navigate to backend folder
-Install dependencies
+Install dependencies:
 npm install
-Create a .env file
-Run the app:
-Development: npm run dev
-Production: npm run build && npm start
+
+Create a .env file.
+
+Start the server:
+npm run dev
 
 API Overview
-Auth
-Method	Route	Description
-POST	/api/auth/signup	Register a user
-POST	/api/auth/login	Login and get token
+POST /api/auth/register – Register a new user
 
-Workout Logs
-Method	Route	Description
-POST	/api/logs	Log a workout
-GET	/api/logs	Get logs by day, month, or year
+POST /api/auth/login – User login
 
-Weekly Plan
-Method	Route	Description
-POST	/api/plan	Create weekly workout plan
-GET	/api/plan?week=	View plan for a given week
-PUT	/api/plan/:day	Update a specific day in the plan
+POST /api/workouts – Create a workout log
 
-Stats
-Method	Route	Description
-GET	/api/stats/monthly	Monthly calories burned
-GET	/api/stats/frequent	Most frequent workout type
+GET /api/workouts – View all workout logs
+
+POST /api/plans – Create a weekly plan
+
+GET /api/plans – View weekly plans
+
+GET /api/stats – View workout statistics
+
+Note: All workout and plan routes require a valid JWT token.
 
 Technologies Used
+TypeScript
+
 Node.js
 
 Express.js
 
-TypeScript
-
 MongoDB + Mongoose
 
-JWT (Authentication)
+JWT for authentication
 
-bcrypt (Password hashing)
+bcrypt for password hashing
 
-dotenv (Environment config)
+dotenv for environment configuration
 
 License
-MIT License
+This project is licensed under the MIT License.
