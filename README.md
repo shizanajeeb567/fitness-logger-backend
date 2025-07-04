@@ -1,5 +1,5 @@
 Fitness Logger API
-A RESTful API built with TypeScript, Node.js, Express, and MongoDB that allows users to manage their workout logs and weekly fitness plans. Users can log workouts, view their plans, and see workout statistics.
+A RESTful API built with TypeScript, Node, Express, and MongoDB that allows users to manage their workout logs and weekly fitness plans. Users can log workouts, view their plans, and see workout statistics.
 
 Features
 Create and view workout logs
